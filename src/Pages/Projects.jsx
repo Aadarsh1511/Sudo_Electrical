@@ -1,5 +1,7 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { FaShoppingCart, FaMoneyCheckAlt, FaMapMarkerAlt, FaUserMd } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const projects = [
   {
@@ -61,18 +63,29 @@ const projects = [
 ];
 
 const Projects = () => {
+
+
+useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, 
+    });
+  }, []);
+ 
+
+
   return (
     <section className="bg-gray-50 py-16 px-4 md:px-20">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold ">
-          <span className="border-red-500 border-b-4">Our</span> <span className="relative inline-block  ">Projects</span>
+        <h2 className="text-4xl font-bold " data-aos="fade-up">
+          <span className="border-red-500 border-b-4" >Our</span> <span className="relative inline-block  ">Projects</span>
         </h2>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto" data-aos="fade-up">
           Discover our innovative solutions that have transformed businesses across Nepal and beyond.
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-6 flex-col pb-4 ">
+      <div className="grid grid-cols-4 gap-6 flex-col pb-4 " data-aos="fade-up">
         {projects.map((project, idx) => (
           <div
             key={idx}

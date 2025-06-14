@@ -8,21 +8,21 @@ const Footer_nav=()=> {
         <div>
           <p className="font-semibold mb-2">Fans</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Table Fans</li>
-            <li>Stand Fans</li>
-            <li>Wall Fans</li>
-            <li>Lifestyle Fans</li>
-            <li>Exhaust Fans</li>
+            <li className='cursor-pointer'>Table Fans</li>
+            <li className='cursor-pointer'>Stand Fans</li>
+            <li className='cursor-pointer'>Wall Fans</li>
+            <li className='cursor-pointer'>Lifestyle Fans</li>
+            <li className='cursor-pointer'>Exhaust Fans</li>
           </ul>
           <p className="font-semibold mt-4 mb-2">Ceiling Fans</p>
           <ul className="space-y-1 text-gray-600">
-            <li>BLDC Fans</li>
-            <li>High Speed Fans</li>
-            <li>Smart Fans (IOT)</li>
-            <li>Under Light Fans</li>
-            <li>Aero Series Fans</li>
-            <li>Remote Controllable Fans</li>
-            <li>Chandelier Fans</li>
+            <li className='cursor-pointer'>BLDC Fans</li>
+            <li className='cursor-pointer'>High Speed Fans</li>
+            <li className='cursor-pointer'>Smart Fans (IOT)</li>
+            <li className='cursor-pointer'>Under Light Fans</li>
+            <li className='cursor-pointer'>Aero Series Fans</li>
+            <li className='cursor-pointer'>Remote Controllable Fans</li>
+            <li className='cursor-pointer'>Chandelier Fans</li>
           </ul>
         </div>
 
@@ -30,24 +30,24 @@ const Footer_nav=()=> {
         <div>
           <p className="font-semibold mb-2">Small Appliances</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Mixer Grinder</li>
-            <li>Sandwich Maker</li>
-            <li>Electric Kettle</li>
-            <li>Juicer Mixer Grinder</li>
-            <li>Room Heaters</li>
-            <li>Coffee Machines</li>
-            <li>Stand Mixer</li>
-            <li>Irons</li>
-            <li>Induction Cooktop</li>
+            <li className='cursor-pointer'>Mixer Grinder</li>
+            <li className='cursor-pointer'>Sandwich Maker</li>
+            <li className='cursor-pointer'>Electric Kettle</li>
+            <li className='cursor-pointer'>Juicer Mixer Grinder</li>
+            <li className='cursor-pointer'>Room Heaters</li>
+            <li className='cursor-pointer'>Coffee Machines</li>
+            <li className='cursor-pointer'>Stand Mixer</li>
+            <li className='cursor-pointer'>Irons</li>
+            <li className='cursor-pointer'>Induction Cooktop</li>
           </ul>
           <p className="font-semibold mt-4 mb-2">Air Coolers</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Desert Cooler</li>
-            <li>Tower Cooler</li>
-            <li>Personal Cooler</li>
-            <li>Window Cooler</li>
-            <li>Industrial Cooler</li>
-            <li>Portable Cooler</li>
+            <li className='cursor-pointer'>Desert Cooler</li>
+            <li className='cursor-pointer'>Tower Cooler</li>
+            <li className='cursor-pointer'>Personal Cooler</li>
+            <li className='cursor-pointer'>Window Cooler</li>
+            <li className='cursor-pointer'>Industrial Cooler</li>
+            <li className='cursor-pointer'>Portable Cooler</li>
           </ul>
         </div>
 
@@ -55,18 +55,18 @@ const Footer_nav=()=> {
         <div>
           <p className="font-semibold mb-2">Professional Lighting</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Retail Lighting</li>
+            <li className='cursor-pointer'>Retail Lighting</li>
           </ul>
           <p className="font-semibold mt-4 mb-2">Water Heaters</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Storage Water Heater</li>
-            <li>Instant Water Heater</li>
-            <li>Immersion Water Heater</li>
+            <li className='cursor-pointer'>Storage Water Heater</li>
+            <li className='cursor-pointer'>Instant Water Heater</li>
+            <li className='cursor-pointer'>Immersion Water Heater</li>
           </ul>
           <p className="font-semibold mt-4 mb-2">Brands</p>
           <ul className="space-y-1 text-gray-600">
-            <li>DE'Longhi</li>
-            <li>Kenwood</li>
+            <li className='cursor-pointer'>DE'Longhi</li>
+            <li className='cursor-pointer'>Kenwood</li>
           </ul>
         </div>
 
@@ -74,19 +74,19 @@ const Footer_nav=()=> {
         <div>
           <p className="font-semibold mb-2">LED Consumer Luminaries</p>
           <ul className="space-y-1 text-gray-600">
-            <li>LED Strip Lights</li>
-            <li>LED Street Lights</li>
-            <li>LED Spot Lights</li>
-            <li>LED Panels</li>
-            <li>LED Flood Lights</li>
-            <li>LED Down Lighters</li>
-            <li>LED Battens</li>
-            <li>Desk Lamps</li>
+            <li className='cursor-pointer'>LED Strip Lights</li>
+            <li className='cursor-pointer'>LED Street Lights</li>
+            <li className='cursor-pointer'>LED Spot Lights</li>
+            <li className='cursor-pointer'>LED Panels</li>
+            <li className='cursor-pointer'>LED Flood Lights</li>
+            <li className='cursor-pointer'>LED Down Lighters</li>
+            <li className='cursor-pointer'>LED Battens</li>
+            <li className='cursor-pointer'>Desk Lamps</li>
           </ul>
           <p className="font-semibold mt-4 mb-2">LED Lamps & Tubes</p>
           <ul className="space-y-1 text-gray-600">
-            <li>LED Lamps</li>
-            <li>LED Tubes</li>
+            <li className='cursor-pointer'>LED Lamps</li>
+            <li className='cursor-pointer'>LED Tubes</li>
           </ul>
         </div>
 
@@ -94,16 +94,16 @@ const Footer_nav=()=> {
         <div>
           <p className="font-semibold mb-2">Media Room</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Press Release</li>
-            <li>Media Coverage</li>
-            <li>Events & Exhibitions</li>
-            <li>Media Kit</li>
-            <li>Videos</li>
+            <li className='cursor-pointer'>Press Release</li>
+            <li className='cursor-pointer'>Media Coverage</li>
+            <li className='cursor-pointer'>Events & Exhibitions</li>
+            <li className='cursor-pointer'>Media Kit</li>
+            <li className='cursor-pointer'>Videos</li>
           </ul>
           <p className="font-semibold mt-4 mb-2">About Us</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Worldwide Presence</li>
-            <li>Awards & Accolades</li>
+            <li className='cursor-pointer'>Worldwide Presence</li>
+            <li className='cursor-pointer'>Awards & Accolades</li>
           </ul>
         </div>
 
@@ -111,20 +111,20 @@ const Footer_nav=()=> {
         <div>
           <p className="font-semibold mb-2">Careers</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Life At Orient</li>
-            <li>Job Openings</li>
+            <li className='cursor-pointer'>Life At Orient</li>
+            <li className='cursor-pointer'>Job Openings</li>
           </ul>
           <p className="font-semibold mt-4 mb-2">Policies</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Privacy Policy</li>
-            <li>Returns & Refund</li>
+            <li className='cursor-pointer'>Privacy Policy</li>
+            <li className='cursor-pointer'>Returns & Refund</li>
           </ul>
           <p className="font-semibold mt-4 mb-2">Others</p>
           <ul className="space-y-1 text-gray-600">
-            <li>Store Locator</li>
-            <li>Switchgear Catalog</li>
-            <li>Disclosures</li>
-            <li>Virtual Home</li>
+            <li className='cursor-pointer'>Store Locator</li>
+            <li className='cursor-pointer'>Switchgear Catalog</li>
+            <li className='cursor-pointer'>Disclosures</li>
+            <li className='cursor-pointer'>Virtual Home</li>
           </ul>
         </div>
       </div>

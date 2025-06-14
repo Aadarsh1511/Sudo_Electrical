@@ -1,5 +1,7 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { FaBolt, FaSolarPanel, FaTools, FaChartLine, FaHome } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const services = [
   {
@@ -34,17 +36,25 @@ const services = [
   },
 ];
 
+  
 const ServicesPage = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, 
+    });
+  }, []);
+ 
   return (
     <section className="bg-[#f9fafb] py-16 px-6 md:px-20">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800"> <span className=" border-red-500 border-b-4">Our</span> Services</h1>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-800" data-aos="fade-up"> <span className=" border-red-500 border-b-4" >Our</span> Services</h1>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto" data-aos="fade-up">
           We provide a wide range of professional services in the field of electrical and solar energy solutions, tailored for homes and businesses.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
         {services.map((service, index) => (
           <div
             key={index}

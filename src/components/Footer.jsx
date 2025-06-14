@@ -49,12 +49,12 @@ const Footer=()=> {
           <div className="w-36 h-[2px] bg-red-500 my-4" />
           <p className="text-sm font-semibold mb-2">FOLLOW US</p>
           <div className="flex gap-4 text-lg">
-            <FaTwitter />
-            <FaFacebookF />
-            <FaInstagram />
-            <FaWhatsapp />
-            <FaLinkedinIn />
-            <FaYoutube />
+            <FaTwitter className='hover:text-sky-500' />
+            <FaFacebookF  className='hover:text-blue-500'/>
+            <FaInstagram className='hover:text-pink-500'/>
+            <FaWhatsapp  className='hover:text-green-500'/>
+            <FaLinkedinIn className='hover:text-blue-500' />
+            <FaYoutube  className='hover:text-red-500'/>
           </div>
         </div>
       </div>
