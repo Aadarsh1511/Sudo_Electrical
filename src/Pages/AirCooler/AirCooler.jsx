@@ -1,4 +1,4 @@
-import React, {useRef,useState} from 'react';
+import React, {useRef,useState,useEffect} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination ,Autoplay } from 'swiper/modules'; 
 import 'swiper/css';
@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/button';
 import "swiper/css/pagination";
 import { ChevronLeft, ChevronRight} from "lucide-react";
 import {FaInstagram, FaTwitter, FaFacebookF, FaLinkedinIn, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const products2 = [
@@ -391,9 +393,19 @@ const AirCooler = ()=> {
   const swiperRef = useRef(null);
   const prevRef = useRef(null);
     const nextRef = useRef(null);
+
+
+useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: false, 
+  });
+}, []);
+
+
   return (
-    <div>
-      <div>
+    <div className='font-serif bg-[#f8f4ee]'>
+      <div data-aos="fade-up">
   <img
     src="https://thomsonhome.in/wp-content/uploads/2023/03/Banner2.webp"
     alt="Banner"
@@ -401,13 +413,13 @@ const AirCooler = ()=> {
   />
 </div>
 
-       <div className="flex flex-col items-center py-16 px-4 md:px-10 bg-[#f8f4ee]">
+       <div className="flex flex-col items-center py-16 px-4 md:px-10 bg-[#f8f4ee]" data-aos="fade-up">
   <h2 className="text-center text-3xl mb-8 font-semibold font-Radley">
     Shop By Category
   </h2>
 
   <div className="w-full max-w-6xl px-2 sm:px-4">
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8" data-aos="zoom-in">
       {Categories.map((category, index) => (
         <div key={index} className="flex flex-col items-center">
           <div className="bg-white shadow-lg rounded-full h-32 w-32 sm:h-36 sm:w-36 md:h-40 md:w-40 flex items-center justify-center overflow-hidden duration-300 hover:scale-105">
@@ -427,7 +439,7 @@ const AirCooler = ()=> {
   </div>
 </div>
 
-<section className="py-12 bg-[#f8f4ee]">
+<section className="py-12 bg-[#f8f4ee]" data-aos="fade-up">
       <h2 className="text-center text-3xl font-semibold mb-8">
         Coolest Deals
       </h2>
@@ -552,23 +564,23 @@ const AirCooler = ()=> {
       </div>
 <div className="custom-pagination-1 mt-8 flex justify-center gap-2"></div>
       <div className="mt-10 flex justify-center">
-        <Button className="px-6 py-2">View all</Button>
+        <Button className="px-6 py-2" data-aos="fade-up">View all</Button>
       </div>
     </section>
-    <div className="flex flex-col justify-center bg-[#f8f4ee] items-center w-full">
+    <div className="flex flex-col justify-center bg-[#f8f4ee] items-center w-full" data-aos="fade-up">
   <img
     src="public/images/Cooler3 (1).jpg"
     alt="bn-image"
     className="w-full h-48 sm:h-64 md:h-80 lg:h-[600px] object-fill"
   />
-  <Button className="flex w-48 sm:w-60 md:w-64 lg:w-[250px] mt-6 p-3 sm:p-4">
+  <Button className="flex w-48 sm:w-60 md:w-64 lg:w-[250px] mt-6 p-3 sm:p-4" data-aos="fade-up">
     View Unique Cooling Coolers
   </Button>
 </div>
 
 
 
-<section className="py-10 pt-24 bg-[#f8f4ee]">
+<section className="py-10 pt-24 bg-[#f8f4ee]" data-aos="fade-up">
       <h2 className="text-center text-3xl font-semibold mb-8">
         Lowest Prices Ever
       </h2>
@@ -693,13 +705,13 @@ const AirCooler = ()=> {
       </div>
 <div className="custom-pagination-2 mt-8 flex justify-center gap-2"></div>
       <div className="mt-10 flex justify-center">
-        <Button className="px-6 py-2">View all</Button>
+        <Button className="px-6 py-2" data-aos="fade-up">View all</Button>
       </div>
     </section>
 
 
 
-<div className="px-4 sm:px-8 md:px-16 lg:px-32 pt-16 pb-20 bg-[#f8f4ee]">
+<div className="px-4 sm:px-8 md:px-16 lg:px-32 pt-16 pb-20 bg-[#f8f4ee]" data-aos="fade-up">
   <div className="w-full bg-black overflow-hidden">
     <video
       autoPlay
@@ -718,7 +730,7 @@ const AirCooler = ()=> {
 </div>
 
 
-<section className="py-8 bg-[#f8f4ee]">
+<section className="py-8 bg-[#f8f4ee]" data-aos="fade-up">
       <h2 className="text-center text-3xl font-semibold mb-8">
         Popular Picks
       </h2>
@@ -843,7 +855,7 @@ const AirCooler = ()=> {
       </div>
 <div className="custom-pagination-2 mt-8 flex justify-center gap-2"></div>
       <div className="mt-10 flex justify-center">
-        <Button className="px-6 py-2">View all</Button>
+        <Button className="px-6 py-2" data-aos="fade-up">View all</Button>
       </div>
       
       <div className='w-full bg-[#f8f4ee]  pt-16 pl-16 pr-16'>
@@ -851,13 +863,13 @@ const AirCooler = ()=> {
       </div>
       
     </section>
-     <div className="flex flex-col items-center py-16 px-4 md:px-10 bg-[#f8f4ee]">
+     <div className="flex flex-col items-center py-16 px-4 md:px-10 bg-[#f8f4ee]" data-aos="fade-up">
   <h2 className="text-center text-3xl mb-8 font-semibold font-Radley">
     Trending Categories
   </h2>
 
   <div className="w-full max-w-6xl px-2 sm:px-4">
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8" data-aos="zoom-in">
       {Categories.map((category, index) => (
         <div key={index} className="flex flex-col items-center">
           <div className="bg-white shadow-lg rounded-full h-32 w-32 sm:h-36 sm:w-36 md:h-40 md:w-40 flex items-center justify-center overflow-hidden duration-300 hover:scale-105">
@@ -881,7 +893,7 @@ const AirCooler = ()=> {
       </div>
 
 
-<section className="py-12 bg-[#f8f4ee]">
+<section className="py-12 bg-[#f8f4ee]" data-aos="fade-up">
       <h2 className="text-center text-3xl font-semibold mb-8">
         Our Best Sellers
       </h2>
@@ -1006,7 +1018,7 @@ const AirCooler = ()=> {
       </div>
 <div className="custom-pagination-3 mt-8 flex justify-center gap-2"></div>
       <div className="mt-10 flex justify-center">
-        <Button className="px-6 py-2">View all</Button>
+        <Button className="px-6 py-2" data-aos="fade-up">View all</Button>
       </div>
       
       <div className='w-full bg-[#f8f4ee]  pt-16 pl-16 pr-16'>
@@ -1014,7 +1026,7 @@ const AirCooler = ()=> {
       </div>
       
     </section>
-   <div className="px-4 sm:px-10 md:px-20 lg:px-40 bg-[#f8f4ee] relative">
+   <div className="px-4 sm:px-10 md:px-20 lg:px-40 bg-[#f8f4ee] relative" data-aos="fade-up">
          <h2 className="text-3xl text-center font-semibold mb-10">Air Cooler Related Blogs</h2>
        
          {/* Left Button */}
@@ -1079,9 +1091,9 @@ const AirCooler = ()=> {
           </div>
 
 
-<section className="flex flex-col lg:flex-row justify-center items-center bg-[#f8f4ee] w-full px-4 md:px-10 lg:px-20 py-10">
+<section className="flex flex-col lg:flex-row justify-center items-center bg-[#f8f4ee] w-full px-4 md:px-10 lg:px-20 py-10" data-aos="fade-up">
   {/* FAQ Section */}
-  <div className="w-full lg:w-3/4 xl:w-3/5 py-8 lg:py-16">
+  <div className="w-full lg:w-3/4 xl:w-3/5 py-8 lg:py-16" data-aos="fade-right">
     <h2 className="text-3xl font-bold text-center mb-8">FAQs</h2>
     <div className="space-y-4">
       {faqs.map((item, i) => (
@@ -1094,7 +1106,7 @@ const AirCooler = ()=> {
   </div>
 
   {/* Follow Us Section */}
-  <div className="w-full lg:w-1/4 flex flex-col items-center mt-8 lg:mt-0">
+  <div className="w-full lg:w-1/4 flex flex-col items-center mt-8 lg:mt-0" data-aos="fade-left">
     <p className="text-2xl font-semibold font-serif mb-4">FOLLOW US</p>
     <div className="flex gap-4 text-3xl flex-wrap justify-center">
       <FaTwitter className="text-blue-500 hover:text-blue-400 cursor-pointer" />

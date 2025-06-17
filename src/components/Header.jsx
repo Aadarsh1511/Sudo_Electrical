@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <div>
-      {/* Top Bar */}
+
       <div className="bg-[#f8f4ee] text-sm py-2 px-4">
         <div className="flex flex-row md:flex-row md:items-center md:justify-between justify-evenly w-full gap-10 md:gap-0 relative">
           <div className="flex flex-col md:flex-row gap-1 md:gap-4 text-xs md:text-sm">
@@ -29,7 +29,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Header */}
+
       <div className="flex items-center justify-between py-4 px-4 md:px-6 shadow flex-wrap">
         <div className="flex flex-col items-center">
           <img src="https://www.innomind.com.tr/wp-content/uploads/2024/10/innologodolulucurve.png" alt="Logo" className="h-6" />
@@ -37,14 +37,14 @@ const Header = () => {
           <p className="font-semibold text-xs sm:text-sm font-serif">INLIGHTNING INNOVATIONS</p>
         </div>
 
-        {/* Mobile Menu Button */}
+
         <div className="md:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Desktop Navigation */}
+
         <nav className="hidden md:flex gap-6 text-sm font-medium">
           <Link to="/" className="hover:text-orange-600 font-serif font-semibold">Home</Link>
           <div
@@ -94,7 +94,7 @@ const Header = () => {
           <Link to="/contact" className="hover:text-orange-600 font-serif font-semibold">Contact</Link>
         </nav>
 
-        {/* Search Bar */}
+
         <div className="relative mt-3 md:mt-0">
           <input
             type="text"
@@ -105,7 +105,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+
       {mobileMenuOpen && (
         <div className="w-full md:hidden mt-4 space-y-2 text-sm font-medium">
           <Link to="/" className="block">Home</Link>

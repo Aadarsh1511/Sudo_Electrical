@@ -1,9 +1,9 @@
-import React, { useRef,useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/Card";
-import {Play, ChevronLeft, ChevronRight, User, ShoppingBag, Search } from "lucide-react";
+import { Play, ChevronLeft, ChevronRight, User, ShoppingBag, Search } from "lucide-react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation,Pagination, Autoplay } from 'swiper/modules'; 
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import "swiper/css/autoplay";
@@ -11,25 +11,25 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const images2 =[
+const images2 = [
   "https://cdn.pixabay.com/photo/2015/03/03/18/39/vacuum-cleaner-657719_1280.jpg",
   "https://cdn.pixabay.com/photo/2014/07/27/17/29/ironing-403074_1280.jpg",
   "https://cdn.pixabay.com/photo/2020/07/20/15/17/washing-machine-5423359_1280.jpg",
   "https://cdn.pixabay.com/photo/2023/05/15/19/51/fans-7995865_1280.jpg",
 ];
-const images3 =[
+const images3 = [
   "https://cdn.pixabay.com/photo/2016/10/27/22/08/cooking-1776648_1280.jpg",
   "https://plus.unsplash.com/premium_photo-1719452894874-3da9fa3b882c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1568392816241-44d223d4d490?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1719639946820-40dce8ae4d30?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
-const Categories=[
-  { name:"Fan",image:"https://purepng.com/public/uploads/large/purepng.com-black-ceiling-fanelectronics-ceiling-fan-fan-94152466621394pdh.png"},
-  { name:"Lighting",image:"https://www.pngmart.com/files/15/Electric-Bulb-PNG-Image.png"},
-  { name:"Air Coolers",image:"https://symphonylimited.com/wp-content/uploads/2023/10/WB1-300x300.jpg"},
-  { name:"Small Appliances",image:"https://th.bing.com/th/id/R.3e5c95112cc3432ba375fce12d085a23?rik=zVMOQ5N7XR6Rjw&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f7%2fMixer-Grinder-PNG-Photos.png&ehk=0fFkUWe0U1x%2fvEXZaORXvxAb%2fVyI6%2b1lczuDLAL5CzE%3d&risl=&pid=ImgRaw&r=0"},
-  { name:"Water Heaters",image:"https://th.bing.com/th/id/OIP.3cMdnIWdS5dbSapbslV5sAHaRF?rs=1&pid=ImgDetMain"},
-  { name:"Switchgears",image:"https://www.elleys.group/assets/switchgearPage/Main.png"},
+const Categories = [
+  { name: "Fan", image: "https://purepng.com/public/uploads/large/purepng.com-black-ceiling-fanelectronics-ceiling-fan-fan-94152466621394pdh.png" },
+  { name: "Lighting", image: "https://www.pngmart.com/files/15/Electric-Bulb-PNG-Image.png" },
+  { name: "Air Coolers", image: "https://symphonylimited.com/wp-content/uploads/2023/10/WB1-300x300.jpg" },
+  { name: "Small Appliances", image: "https://th.bing.com/th/id/R.3e5c95112cc3432ba375fce12d085a23?rik=zVMOQ5N7XR6Rjw&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f7%2fMixer-Grinder-PNG-Photos.png&ehk=0fFkUWe0U1x%2fvEXZaORXvxAb%2fVyI6%2b1lczuDLAL5CzE%3d&risl=&pid=ImgRaw&r=0" },
+  { name: "Water Heaters", image: "https://th.bing.com/th/id/OIP.3cMdnIWdS5dbSapbslV5sAHaRF?rs=1&pid=ImgDetMain" },
+  { name: "Switchgears", image: "https://www.elleys.group/assets/switchgearPage/Main.png" },
 ];
 const products = [
   {
@@ -161,7 +161,7 @@ const summer = [
     title: "Ultimo Tower Air Cooler With Remote 26L",
     rating: 4.5,
     reviews: 5,
-    size: ["26L", "40L","55L"],
+    size: ["26L", "40L", "55L"],
     color: ["#8B8B8B", "#D3CFC9", "#C6C6C6"],
     price: 10419,
     mrp: 13990,
@@ -172,7 +172,7 @@ const summer = [
     title: "Ultimo Desert Air Cooler 50L",
     rating: 4.9,
     reviews: 5,
-    size: ["50L", "65L","88L"],
+    size: ["50L", "65L", "88L"],
     color: ["#F8F8F8", "#E6E6E6", "#D9D9D9", "#C0C0C0", "#4A4A4A", "#000000"],
     price: 9290,
     mrp: 16990,
@@ -267,13 +267,13 @@ const blogData = [
     date: "04 Apr, 2025",
     desc: "Imagine this. It's a Sunday afternoon. Outside, the world buzzes...",
   },
-   {
+  {
     image: "https://orientelectric.com/cdn/shop/articles/Orient_s_Ceiling_Fans_Transform_Modern_Homes.jpg?v=1747122387",
     title: "Whisper-Quiet Comfort Meets Design Elegance: How Orient’s...",
     date: "04 Apr, 2025",
     desc: "Imagine this. It's a Sunday afternoon. Outside, the world buzzes...",
   },
-   {
+  {
     image: "https://orientelectric.com/cdn/shop/articles/Orient_s_Ceiling_Fans_Transform_Modern_Homes.jpg?v=1747122387",
     title: "Whisper-Quiet Comfort Meets Design Elegance: How Orient’s...",
     date: "04 Apr, 2025",
@@ -316,24 +316,18 @@ const VideoCard = ({ src }) => {
 
 
 const Content = () => {
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrIndex((prev) => (prev + 1) % images2.length);
-  //   }, 3000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
-   const [currentIndex1, setCurrentIndex1] = useState(0);
-   const prevSlide1 = () => setCurrentIndex1((prev) => Math.max(prev - 1, 0));
-const nextSlide1 = () => setCurrentIndex1((prev) =>
-  Math.min(prev + 1, videoThumbnails.length - visibleCards)
-);
+  const [currentIndex1, setCurrentIndex1] = useState(0);
+  const prevSlide1 = () => setCurrentIndex1((prev) => Math.max(prev - 1, 0));
+  const nextSlide1 = () => setCurrentIndex1((prev) =>
+    Math.min(prev + 1, videoThumbnails.length - visibleCards)
+  );
 
-const [currentIndex2, setCurrentIndex2] = useState(0);
-const prevSlide2 = () => setCurrentIndex2((prev) => Math.max(prev - 1, 0));
-const nextSlide2 = () => setCurrentIndex2((prev) =>
-  Math.min(prev + 1, videoThumbnails.length - visibleCards)
-);
+  const [currentIndex2, setCurrentIndex2] = useState(0);
+  const prevSlide2 = () => setCurrentIndex2((prev) => Math.max(prev - 1, 0));
+  const nextSlide2 = () => setCurrentIndex2((prev) =>
+    Math.min(prev + 1, videoThumbnails.length - visibleCards)
+  );
 
   const visibleCards = 4;
   const swiperRef = useRef(null);
@@ -346,846 +340,845 @@ const nextSlide2 = () => setCurrentIndex2((prev) =>
   const prevRef3 = useRef(null);
   const nextRef3 = useRef(null);
 
-useEffect(() => {
-  AOS.init({
-    duration: 1000,
-    once: false, 
-  });
-}, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
 
 
   return (
-    <div className="">
+    <div className="font-serif bg-[#f8f4ee]">
       <div className='bg-[#f8f4ee] flex flex-col md:flex-row w-full h-auto md:h-[500px] gap-4'>
-  
-      <div className='md:flex-[9] relative h-[300px] md:h-full w-full overflow-hidden ' data-aos="fade-right">
 
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className='w-full h-full object-cover absolute inset-0 z-0'
+        <div className='md:flex-[9] relative h-[300px] md:h-full w-full overflow-hidden ' data-aos="fade-right">
+
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className='w-full h-full object-cover absolute inset-0 z-0'
+          >
+            <source src="public/videos/front_video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div className="absolute inset-0 bg-black/40 z-10"></div>
+
+          <div className="absolute inset-0 flex md:items-center md:justify-start items-center justify-center md:pt-40 pt-0 pl-0 md:pl-6 text-center md:text-left z-20">
+            <div className="text-white bg-black/40 backdrop-blur-sm p-4 mb-28 md:p-6 rounded-2xl shadow-xl max-w-xl">
+              <h1 className='text-2xl md:text-4xl font-extrabold mb-2 leading-tight font-serif'>Welcome to My Site</h1>
+              <p className='mb-4 text-sm md:text-lg font-serif'>Shop the latest collection</p>
+              <button className='bg-green-600 hover:bg-green-700 font-serif transition-colors duration-300 text-white font-semibold py-2 px-4 rounded-full'>
+                Explore Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className='hidden md:flex flex-[6] flex-col gap-4'>
+          <div className='flex-1 relative overflow-hidden' data-aos="fade-left">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className='w-full h-full object-cover absolute inset-0 z-0'
+            >
+              <source src="public/videos/front_video3.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+          <div className='flex-1 relative overflow-hidden' data-aos="fade-left">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className='w-full h-full object-cover absolute inset-0 z-0'
+            >
+              <source src="public/videos/front_video4.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center py-12 px-4 sm:px-6 md:px-10 bg-[#f8f4ee]" data-aos="fade-up" >
+        <h2 className="text-center text-2xl sm:text-3xl mb-6 md:mb-8 font-semibold font-serif">
+          Show By Category
+        </h2>
+
+        <div className="w-full max-w-6xl px-2 sm:px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8" data-aos="zoom-in">
+            {Categories.map((category, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="bg-white shadow-lg  rounded-full w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center overflow-hidden duration-300 hover:scale-105">
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    loading="lazy"
+                    className="object-contain w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32"
+                  />
+                </div>
+                <h1 className="pt-2 text-center text-sm sm:text-base font-serif font-bold text-gray-800 cursor-pointer">
+                  {category.name}
+                </h1>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full pt-12">
+          <hr className="w-full border-gray-300" />
+        </div>
+      </div>
+
+
+      <div className="w-full py-5 bg-[#f8f4ee]" data-aos="fade-up">
+        <h2 className="text-3xl font-semibold font-serif text-center mb-10">
+          Smart by Design, Thoughtful by Nature
+        </h2>
+
+
+        <div className="max-w-[1400px] mx-auto px-6 relative py-10" data-aos="fade-up">
+          <Swiper
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={20}
+            slidesPerView={4}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+          >
+            {products.map((product, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="flex flex-col items-center">
+                  <div className="w-[270px] h-[400px] bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className='w-full h-full object-cover  inset-0 z-0'
+                    >
+                      <source src={product.video} type="video/mp4" className='object-contain' />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <button className="mt-4 px-6 py-2 bg-gray-900 text-white font-serif rounded-full font-semibold hover:bg-gray-800">
+                    {product.title}
+                  </button>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className='w-full  pt-20 pl-16 pr-16'>
+          <hr className='w-full  '></hr>
+        </div>
+      </div>
+
+      <section className="py-12 bg-[#f8f4ee]" data-aos="fade-up">
+        <h2 className="text-center text-3xl font-semibold font-serif mb-8">
+          Our Latest Innovations
+        </h2>
+
+        <div className="relative px-4 md:px-32">
+
+          <div className="flex justify-between items-center mb-4">
+            <button
+              ref={prevRef2}
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute left-16 top-[200px] hover:text-black transition"
+            >
+              <ChevronLeft />
+            </button>
+            <button
+              ref={nextRef2}
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute right-16 top-[200px] hover:text-black transition"
+            >
+              <ChevronRight />
+            </button>
+          </div>
+
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            pagination={{
+              clickable: true,
+              el: '.custom-pagination-3',
+            }}
+            onInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef2.current;
+              swiper.params.navigation.nextEl = nextRef2.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 }
+            }}
+            className=''
+          >
+            {products2.map((product, index) => (
+              <SwiperSlide key={index}>
+                <Card className="relative">
+                  {product.label && (
+                    <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
+                      {product.label}
+                    </div>
+                  )}
+                  <CardContent className="p-4 flex flex-col items-center text-center">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="h-32 mb-4 object-contain"
+                    />
+                    <h3 className="text-sm font-medium truncate w-full">
+                      {product.title}
+                    </h3>
+                    <div className="text-orange-500 text-sm">
+                      {"★".repeat(Math.round(product.rating))} {product.rating} /{" "}
+                      {product.reviews}
+                    </div>
+
+                    {product.size && (
+                      <div className="text-sm mt-2">
+                        Size:{" "}
+                        {product.size.map((s) => (
+                          <span
+                            className="ml-1 border rounded px-2 py-0.5 text-xs"
+                            key={s}
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {product.type && (
+                      <div className="text-sm mt-2">
+                        Type:{" "}
+                        {product.type.map((t) => (
+                          <span
+                            className="ml-1 border rounded px-2 py-0.5 text-xs"
+                            key={t}
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="text-sm mt-2">
+                      Color:
+                      {product.color.map((c, i) => (
+                        <span
+                          key={i}
+                          className="w-4 h-4 rounded-full inline-block mx-0.5 border"
+                          style={{ backgroundColor: c }}
+                        ></span>
+                      ))}
+                    </div>
+
+                    <div className="mt-2 text-sm">
+                      From ₹
+                      <span className="font-semibold">
+                        {product.price.toLocaleString()}
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-500 line-through">
+                      MRP: ₹{product.mrp.toLocaleString()}
+                    </div>
+                    <div className="text-green-600 text-xs">
+                      {product.discount}
+                    </div>
+
+                    <Button className="mt-3 w-full text-sm font-serif">Add to cart</Button>
+                  </CardContent>
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="custom-pagination-3 mt-8 flex justify-center gap-2"></div>
+        <div className="mt-10 flex justify-center">
+          <Button className="px-6 py-2 font-serif" data-aos="fade-up">View all</Button>
+        </div>
+      </section>
+      <div className='flex  flex-col justify-center items-center w-full' data-aos="fade-up">
+        <img src='https://orientelectric.com/cdn/shop/files/Colors_9752c826-0e69-48be-8420-73f76aab3354.jpg?v=1747914033&width=2000' alt='bn-image' />
+        <Button className=' flex w-[250px]  mb-8 mt-8  font-serif ' data-aos="fade-up">View Unique Colour Fans</Button>
+      </div>
+
+
+      <div className="bg-[#f8f4ee] py-24 px-4" data-aos="fade-up">
+        <div className="flex flex-col md:flex-row items-center justify-center text-center gap-10 max-w-6xl mx-auto">
+
+
+          <div className="flex flex-col items-center text-center max-w-md" data-aos="fade-right">
+            <p className="text-2xl sm:text-3xl font-semibold font-serif">Shopping Just</p>
+            <p className="text-2xl sm:text-3xl font-semibold mb-4 font-serif">Got Personal</p>
+            <p className="text-gray-700 text-sm sm:text-base font-serif">
+              We’re here to help you discover products that perfectly match your needs.
+              Simply click on product guide to get started.
+            </p>
+          </div>
+
+
+          <div className="flex flex-wrap justify-center gap-8" data-aos="fade-left">
+
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center">
+                <img
+                  src="https://orientelectric.com/cdn/shop/files/Group_221701_small.png?v=1676269615"
+                  alt="Fans Guide"
+                  className="w-20 h-20"
+                />
+              </div>
+              <p className="text-center text-gray-700 mt-2 font-serif">Fans<br />Guide</p>
+            </div>
+
+
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center">
+                <img
+                  src="https://orientelectric.com/cdn/shop/files/Group_221702_small.png?v=1676269810"
+                  alt="Air Cooler Guide"
+                  className="w-20 h-20"
+                />
+              </div>
+              <p className="text-center text-gray-700 mt-2 font-serif">Air Cooler<br />Guide</p>
+            </div>
+
+
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center">
+                <img
+                  src="https://orientelectric.com/cdn/shop/files/Group_221703_small.png?v=1676269815"
+                  alt="Lighting Guide"
+                  className="w-20 h-20"
+                />
+              </div>
+              <p className="text-center text-gray-700 mt-2 font-serif">Lighting<br />Guide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='w-full bg-[#f8f4ee]  pl-16 pr-16'>
+        <hr className='w-full  '></hr>
+      </div>
+      <section className="py-12 bg-[#f8f4ee]" data-aos="fade-up">
+        <h2 className="text-center text-3xl font-semibold font-serif mb-8">
+          Summer Special Offerings
+        </h2>
+
+        <div className="relative px-4 md:px-32">
+
+          <div className="flex justify-between items-center mb-4">
+            <button
+              ref={prevRef3}
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute left-16 top-[200px] hover:text-black transition"
+            >
+              <ChevronLeft />
+            </button>
+            <button
+              ref={nextRef3}
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute right-16 top-[200px] hover:text-black transition"
+            >
+              <ChevronRight />
+            </button>
+          </div>
+
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            pagination={{
+              clickable: true,
+              el: '.custom-pagination-3',
+            }}
+            onInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef3.current;
+              swiper.params.navigation.nextEl = nextRef3.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 }
+            }}
+            className=''
+          >
+            {summer.map((product, index) => (
+              <SwiperSlide key={index}>
+                <Card className="relative">
+                  {product.label && (
+                    <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
+                      {product.label}
+                    </div>
+                  )}
+                  <CardContent className="p-4 flex flex-col items-center text-center">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="h-32 mb-4 object-contain"
+                    />
+                    <h3 className="text-sm font-medium truncate w-full">
+                      {product.title}
+                    </h3>
+                    <div className="text-orange-500 text-sm">
+                      {"★".repeat(Math.round(product.rating))} {product.rating} /{" "}
+                      {product.reviews}
+                    </div>
+
+                    {product.size && (
+                      <div className="text-sm mt-2">
+                        Size:{" "}
+                        {product.size.map((s) => (
+                          <span
+                            className="ml-1 border rounded px-2 py-0.5 text-xs"
+                            key={s}
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {product.type && (
+                      <div className="text-sm mt-2">
+                        Type:{" "}
+                        {product.type.map((t) => (
+                          <span
+                            className="ml-1 border rounded px-2 py-0.5 text-xs"
+                            key={t}
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="text-sm mt-2">
+                      Color:
+                      {product.color.map((c, i) => (
+                        <span
+                          key={i}
+                          className="w-4 h-4 rounded-full inline-block mx-0.5 border"
+                          style={{ backgroundColor: c }}
+                        ></span>
+                      ))}
+                    </div>
+
+                    <div className="mt-2 text-sm">
+                      From ₹
+                      <span className="font-semibold">
+                        {product.price.toLocaleString()}
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-500 line-through">
+                      MRP: ₹{product.mrp.toLocaleString()}
+                    </div>
+                    <div className="text-green-600 text-xs">
+                      {product.discount}
+                    </div>
+
+                    <Button className="mt-3 w-full text-sm font-serif">Add to cart</Button>
+                  </CardContent>
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="custom-pagination-3 mt-8 flex justify-center gap-2"></div>
+        <div className="mt-10 flex justify-center">
+          <Button className="px-6 py-2 font-serif" data-aos="fade-up">View all</Button>
+        </div>
+      </section>
+      <div className='w-full bg-[#f8f4ee]  pl-16 pr-16'>
+        <hr className='w-full  '></hr>
+      </div>
+      <section className="py-12 bg-[#f8f4ee]" data-aos="fade-up">
+        <h2 className="text-center text-3xl font-semibold font-serif mb-8">
+          Limited Period Offers
+        </h2>
+
+        <div className="relative px-4 md:px-32">
+
+          <div className="flex justify-between items-center mb-4">
+            <button
+              ref={prevRef}
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute left-16 top-[200px] hover:text-black transition"
+            >
+              <ChevronLeft />
+            </button>
+            <button
+              ref={nextRef}
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute right-16 top-[200px] hover:text-black transition"
+            >
+              <ChevronRight />
+            </button>
+          </div>
+
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            pagination={{
+              clickable: true,
+              el: '.custom-pagination-3',
+            }}
+            onInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 }
+            }}
+            className=''
+          >
+            {limited.map((product, index) => (
+              <SwiperSlide key={index}>
+                <Card className="relative">
+                  {product.label && (
+                    <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
+                      {product.label}
+                    </div>
+                  )}
+                  <CardContent className="p-4 flex flex-col items-center text-center">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="h-32 mb-4 object-contain"
+                    />
+                    <h3 className="text-sm font-medium truncate w-full">
+                      {product.title}
+                    </h3>
+                    <div className="text-orange-500 text-sm">
+                      {"★".repeat(Math.round(product.rating))} {product.rating} /{" "}
+                      {product.reviews}
+                    </div>
+
+                    {product.size && (
+                      <div className="text-sm mt-2">
+                        Size:{" "}
+                        {product.size.map((s) => (
+                          <span
+                            className="ml-1 border rounded px-2 py-0.5 text-xs"
+                            key={s}
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {product.type && (
+                      <div className="text-sm mt-2">
+                        Type:{" "}
+                        {product.type.map((t) => (
+                          <span
+                            className="ml-1 border rounded px-2 py-0.5 text-xs"
+                            key={t}
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="text-sm mt-2">
+                      Color:
+                      {product.color.map((c, i) => (
+                        <span
+                          key={i}
+                          className="w-4 h-4 rounded-full inline-block mx-0.5 border"
+                          style={{ backgroundColor: c }}
+                        ></span>
+                      ))}
+                    </div>
+
+                    <div className="mt-2 text-sm">
+                      From ₹
+                      <span className="font-semibold">
+                        {product.price.toLocaleString()}
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-500 line-through">
+                      MRP: ₹{product.mrp.toLocaleString()}
+                    </div>
+                    <div className="text-green-600 text-xs">
+                      {product.discount}
+                    </div>
+
+                    <Button className="mt-3 w-full text-sm font-serif">Add to cart</Button>
+                  </CardContent>
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        <div className="custom-pagination-3 mt-8 flex justify-center gap-2"></div>
+        <div className="mt-10 flex justify-center">
+          <Button className="px-6 py-2 font-serif" data-aos="fade-up">View all</Button>
+        </div>
+      </section>
+      <div className='w-full bg-[#f8f4ee]  pl-16 pr-16'>
+        <hr className='w-full  '></hr>
+      </div>
+      <div className="py-10 text-center bg-[#f8f4ee] " >
+        <h2 className="text-4xl font-light mb-10 font-serif" data-aos="fade-up">A Promise of Excellence</h2>
+
+        <div className="flex justify-center gap-32 flex-wrap" data-aos="fade-up">
+
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-orange-50 rounded-full flex items-center justify-center">
+              <img
+                src="https://orientelectric.com/cdn/shop/files/65_years.svg?v=1687342854"
+                alt="65 Years"
+                className="w-32 h-32"
+              />
+            </div>
+            <p className="text-gray-700 text-sm mt-2 font-serif">Expertise<br />of 65+ years</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-orange-50 rounded-full flex items-center justify-center">
+              <img
+                src="https://orientelectric.com/cdn/shop/files/innovation.svg?v=1687342865"
+                alt="Innovation"
+                className="w-32 h-32"
+              />
+            </div>
+            <p className="text-gray-700 text-sm mt-2 font-serif">Culture of<br />Innovation & Design</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-orange-50 rounded-full flex items-center justify-center">
+              <img
+                src="https://orientelectric.com/cdn/shop/files/nationwide_impact.svg?v=1684999189"
+                alt="Nationwide"
+                className="w-32 h-32"
+              />
+            </div>
+            <p className="text-gray-700 text-sm mt-2 font-serif">Nationwide<br />Presence</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-orange-50 rounded-full flex items-center justify-center">
+              <img
+                src="https://orientelectric.com/cdn/shop/files/happy_customers.svg?v=1684999228"
+                alt="Happy Customers"
+                className="w-32 h-32"
+              />
+            </div>
+            <p className="text-gray-700 text-sm mt-2 font-serif">20+ Crore<br />Happy Customers</p>
+          </div>
+        </div>
+        <div className='w-full bg-[#f8f4ee] pt-16 pl-16 pr-16'>
+          <hr className='w-full  '></hr>
+        </div>
+      </div>
+      <section className="bg-[#f8f4ee] py-16">
+        <h2 className="text-4xl text-center font-light mb-8 font-serif" data-aos="fade-up">
+          Our Handpicked Brands
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 md:px-40">
+          <div data-aos="fade-right">
+            <img
+              src="https://www.myzeo.com/wp-content/uploads/2020/02/load-image-18-1-1536x1413.jpeg"
+              alt="Brand kitchen appliances"
+              loading="lazy"
+              className="w-full h-72 object-fill rounded-lg"
+            />
+          </div>
+          <div data-aos="fade-left">
+            <img
+              src="https://thumbs.dreamstime.com/b/seller-household-appliances-section-portrait-male-consultant-working-small-hypermarket-63661856.jpg"
+              alt="Home appliances consultant"
+              loading="lazy"
+              className="w-full h-72 object-fill rounded-lg"
+            />
+          </div>
+        </div>
+        <hr className="mx-auto w-full border-t border-gray-300 mt-16" />
+      </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 pt-10  justify-center bg-[#f8f4ee] items-center gap-5 px-4 md:px-40">
+        <div className="flex flex-col  items-center">
+          <div className="flex flex-col h-[200px] justify-center  text-justify" data-aos="fade-right">
+            <p className="text-3xl font-semibold font-serif">Looking to do</p>
+            <p className="text-3xl font-semibold mb-3 font-serif">business with us?</p>
+            <p className="w-[250px]  text-gray-700 font-serif">
+              We’re happy to help you with your <span className="text-center font-serif">requirements.</span>
+            </p>
+            <Button className="w-[200px] mt-3 font-serif">Get in Touch</Button>
+          </div>
+        </div>
+        <div className="flex justify-center" data-aos="fade-left">
+          <img
+            src="https://img.freepik.com/premium-photo/manager-boss-worker-helping-new-employee-as-call-center-agent-training-consultant-work-planning-workflow-with-colleague-company-customer-service-team-conversation-with-coworker_590464-82374.jpg"
+            className="w-[400px] h-[300px] rounded-lg object-cover"
+            alt="Business consultation"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div className='w-full bg-[#f8f4ee] pt-16 pl-16 pr-16'>
+        <hr className='w-full  '></hr>
+      </div>
+      <div className="pt-10 bg-[#f8f4ee] px-4 md:px-40 relative" data-aos="fade-up">
+        <h2 className="text-3xl text-center font-semibold mb-10 font-serif">Blog</h2>
+
+
+        <div className="absolute top-72 left-4 md:left-24 z-10 -translate-y-1/2">
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
+          >
+            <ChevronLeft />
+          </button>
+        </div>
+        <div className="absolute top-72 right-4 md:right-[100px] z-10 -translate-y-1/2">
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
+          >
+            <ChevronRight />
+          </button>
+        </div>
+
+        <Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          spaceBetween={30}
+          modules={[Navigation]}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
         >
-          <source src="public/videos/front_video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          {blogData.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="rounded-xl overflow-hidden shadow-sm bg-white">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="rounded-md mb-4 w-full h-48 object-cover"
+                />
+                <div className="px-2 pb-4">
+                  <h3 className="text-lg font-medium leading-snug">{item.title}</h3>
+                  <p className="text-sm text-gray-500 mt-1">{item.date}</p>
+                  <p className="text-sm text-gray-600 mt-2">{item.desc}</p>
+                  <a
+                    href="#"
+                    className="text-blue-600 text-sm mt-2 inline-flex items-center gap-1"
+                  >
+                    Read more <span className="text-xs">➜</span>
+                  </a>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-        <div className="absolute inset-0 flex md:items-center md:justify-start items-center justify-center md:pt-40 pt-0 pl-0 md:pl-6 text-center md:text-left z-20">
-          <div className="text-white bg-black/40 backdrop-blur-sm p-4 mb-28 md:p-6 rounded-2xl shadow-xl max-w-xl">
-            <h1 className='text-2xl md:text-4xl font-extrabold mb-2 leading-tight font-serif'>Welcome to My Site</h1>
-            <p className='mb-4 text-sm md:text-lg font-serif'>Shop the latest collection</p>
-            <button className='bg-green-600 hover:bg-green-700 font-serif transition-colors duration-300 text-white font-semibold py-2 px-4 rounded-full'>
-              Explore Now
+      <div className='w-full bg-[#f8f4ee]  pt-16 pl-16 pr-16'>
+        <hr className='w-full  '></hr>
+      </div>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2'>
+        <div className="w-full bg-[#f8f4ee] flex flex-col items-center px-4 py-10" >
+          <FaFacebook className="text-4xl text-blue-500 mb-2" data-aos="fade-up" />
+          <h2 className="text-4xl font-semibold text-center text-[#333] font-serif" data-aos="fade-up">Follow Us</h2>
+          <h3 className="text-base text-gray-700 text-center mt-1 font-serif" data-aos="fade-up">@InnomindSolutions</h3>
+          <h4 className="text-sm text-gray-600 text-center mb-6 font-serif" data-aos="fade-up">121k followers</h4>
+
+          <div className="flex items-center gap-4 w-full max-w-[1100px]">
+            <button
+              onClick={prevSlide1}
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
+              data-aos="fade-up"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            <div className="flex gap-4 overflow-hidden" data-aos="fade-up">
+              {videoThumbnails
+                .slice(currentIndex1, currentIndex1 + visibleCards)
+                .map((src, index) => (
+                  <VideoCard key={index} src={src} />
+                ))}
+            </div>
+
+            <button
+              onClick={nextSlide1}
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
+              data-aos="fade-up"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+        </div>
+
+        <div className="w-full bg-[#f8f4ee] flex flex-col items-center px-4 py-10" >
+          <FaInstagram className="text-4xl text-pink-500 mb-2" data-aos="fade-up" />
+          <h2 className="text-4xl font-semibold text-center text-[#333] font-serif" data-aos="fade-up">Follow Us</h2>
+          <h3 className="text-base text-gray-700 text-center mt-1 font-serif" data-aos="fade-up">@InnomindSolutions</h3>
+          <h4 className="text-sm text-gray-600 text-center mb-6 font-serif" data-aos="fade-up">180k followers</h4>
+
+          <div className="flex items-center gap-4 w-full max-w-[1100px]">
+            <button
+              onClick={prevSlide2}
+              data-aos="fade-up"
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            <div className="flex gap-4 overflow-hidden" data-aos="fade-up">
+              {videoThumbnails
+                .slice(currentIndex2, currentIndex2 + visibleCards)
+                .map((src, index) => (
+                  <VideoCard key={index} src={src} className />
+                ))}
+            </div>
+
+            <button
+              onClick={nextSlide2}
+              data-aos="fade-up"
+              className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
+            >
+              <ChevronRight size={24} />
             </button>
           </div>
         </div>
       </div>
 
-      <div className='hidden md:flex flex-[6] flex-col gap-4'>
-        <div className='flex-1 relative overflow-hidden' data-aos="fade-left">
-          <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className='w-full h-full object-cover absolute inset-0 z-0'
-        >
-          <source src="public/videos/front_video3.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        <div className='flex-1 relative overflow-hidden' data-aos="fade-left">
-          <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className='w-full h-full object-cover absolute inset-0 z-0'
-        >
-          <source src="public/videos/front_video4.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-      </div>
+
     </div>
-      <div className="flex flex-col items-center py-12 px-4 sm:px-6 md:px-10 bg-[#f8f4ee]" >
-  <h2 className="text-center text-2xl sm:text-3xl mb-6 md:mb-8 font-semibold font-serif">
-    Show By Category
-  </h2>
-
-  <div className="w-full max-w-6xl px-2 sm:px-4">
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
-      {Categories.map((category, index) => (
-        <div key={index} className="flex flex-col items-center">
-          <div data-aos="zoom-in" className="bg-white shadow-lg  rounded-full w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 flex items-center justify-center overflow-hidden duration-300 hover:scale-105">
-            <img
-              src={category.image}
-              alt={category.name}
-              loading="lazy"
-              className="object-contain w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32"
-            />
-          </div>
-          <h1 className="pt-2 text-center text-sm sm:text-base font- font-bold text-gray-800 cursor-pointer">
-            {category.name}
-          </h1>
-        </div>
-      ))}
-    </div>
-  </div>
-
-  <div className="w-full pt-12">
-    <hr className="w-full border-gray-300" />
-  </div>
-</div>
-
-    
-  <div className="w-full py-5 bg-[#f8f4ee]">
-      <h2 className="text-3xl font-semibold font-serif text-center mb-10">
-        Smart by Design, Thoughtful by Nature
-      </h2>
-
-
-      <div className="max-w-[1400px] mx-auto px-6 relative py-10">
-      <Swiper
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        modules={[Autoplay]} 
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        spaceBetween={20}
-        slidesPerView={4}
-        breakpoints={{
-          0: { slidesPerView: 1 },
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        }}
-      >
-        {products.map((product, idx) => (
-          <SwiperSlide key={idx}>
-            <div className="flex flex-col items-center">
-              <div className="w-[270px] h-[400px] bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105">
-                <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className='w-full h-full object-cover  inset-0 z-0'
-        >
-          <source src={product.video} type="video/mp4" className='object-contain' />
-          Your browser does not support the video tag.
-        </video>
-              </div>
-              <button className="mt-4 px-6 py-2 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800">
-                {product.title}
-              </button>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-
-      <div className='w-full  pt-20 pl-16 pr-16'>
-      <hr className='w-full  '></hr>
-      </div>
-    </div>
-
-   <section className="py-12 bg-[#f8f4ee]">
-          <h2 className="text-center text-3xl font-semibold mb-8">
-            Our Latest Innovations
-          </h2>
-    
-          <div className="relative px-4 md:px-32">
-          
-            <div className="flex justify-between items-center mb-4">
-              <button
-                ref={prevRef2}
-                className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute left-16 top-[200px] hover:text-black transition"
-              >
-                <ChevronLeft />
-              </button>
-              <button
-                ref={nextRef2}
-                className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute right-16 top-[200px] hover:text-black transition"
-              >
-                <ChevronRight  />
-              </button>
-            </div>
-    
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={16}
-              slidesPerView={1}
-              pagination={{ 
-              clickable: true,
-              el: '.custom-pagination-3',
-               }}
-              onInit={(swiper) => {
-                swiper.params.navigation.prevEl = prevRef2.current;
-                swiper.params.navigation.nextEl = nextRef2.current;
-                swiper.navigation.init();
-                swiper.navigation.update();
-              }}
-               breakpoints={{
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 4 }
-              }}
-              className=''
-            >
-              {products2.map((product, index) => (
-                <SwiperSlide key={index}>
-                  <Card className="relative">
-                    {product.label && (
-                      <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
-                        {product.label}
-                      </div>
-                    )}
-                    <CardContent className="p-4 flex flex-col items-center text-center">
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className="h-32 mb-4 object-contain"
-                      />
-                      <h3 className="text-sm font-medium truncate w-full">
-                        {product.title}
-                      </h3>
-                      <div className="text-orange-500 text-sm">
-                        {"★".repeat(Math.round(product.rating))} {product.rating} /{" "}
-                        {product.reviews}
-                      </div>
-    
-                      {product.size && (
-                        <div className="text-sm mt-2">
-                          Size:{" "}
-                          {product.size.map((s) => (
-                            <span
-                              className="ml-1 border rounded px-2 py-0.5 text-xs"
-                              key={s}
-                            >
-                              {s}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-    
-                      {product.type && (
-                        <div className="text-sm mt-2">
-                          Type:{" "}
-                          {product.type.map((t) => (
-                            <span
-                              className="ml-1 border rounded px-2 py-0.5 text-xs"
-                              key={t}
-                            >
-                              {t}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-    
-                      <div className="text-sm mt-2">
-                        Color:
-                        {product.color.map((c, i) => (
-                          <span
-                            key={i}
-                            className="w-4 h-4 rounded-full inline-block mx-0.5 border"
-                            style={{ backgroundColor: c }}
-                          ></span>
-                        ))}
-                      </div>
-    
-                      <div className="mt-2 text-sm">
-                        From ₹
-                        <span className="font-semibold">
-                          {product.price.toLocaleString()}
-                        </span>
-                      </div>
-                      <div className="text-xs text-gray-500 line-through">
-                        MRP: ₹{product.mrp.toLocaleString()}
-                      </div>
-                      <div className="text-green-600 text-xs">
-                        {product.discount}
-                      </div>
-    
-                      <Button className="mt-3 w-full text-sm">Add to cart</Button>
-                    </CardContent>
-                  </Card>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-    <div className="custom-pagination-3 mt-8 flex justify-center gap-2"></div>
-          <div className="mt-10 flex justify-center">
-            <Button className="px-6 py-2">View all</Button>
-          </div>
-        </section>
-          <div className='flex  flex-col justify-center items-center w-full'>
-            <img src='https://orientelectric.com/cdn/shop/files/Colors_9752c826-0e69-48be-8420-73f76aab3354.jpg?v=1747914033&width=2000' alt='bn-image'/>
-            <Button className=' flex w-[250px]  mb-8   '>View Unique Colour Fans</Button>
-          </div>
-
-
-<div className="bg-[#f8f4ee] py-24 px-4">
-  <div className="flex flex-col md:flex-row items-center justify-center text-center gap-10 max-w-6xl mx-auto">
-    
-    {/* Text Section */}
-    <div className="flex flex-col items-center text-center max-w-md" data-aos="fade-right">
-      <p className="text-2xl sm:text-3xl font-semibold">Shopping Just</p>
-      <p className="text-2xl sm:text-3xl font-semibold mb-4">Got Personal</p>
-      <p className="text-gray-700 text-sm sm:text-base">
-        We’re here to help you discover products that perfectly match your needs. 
-        Simply click on product guide to get started.
-      </p>
-    </div>
-
-    {/* Icons Section */}
-    <div className="flex flex-wrap justify-center gap-8" data-aos="fade-left">
-      {/* Fans Guide */}
-      <div className="flex flex-col items-center">
-        <div className="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center">
-          <img
-            src="https://orientelectric.com/cdn/shop/files/Group_221701_small.png?v=1676269615"
-            alt="Fans Guide"
-            className="w-20 h-20"
-          />
-        </div>
-        <p className="text-center text-gray-700 mt-2">Fans<br />Guide</p>
-      </div>
-
-      {/* Air Cooler Guide */}
-      <div className="flex flex-col items-center">
-        <div className="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center">
-          <img
-            src="https://orientelectric.com/cdn/shop/files/Group_221702_small.png?v=1676269810"
-            alt="Air Cooler Guide"
-            className="w-20 h-20"
-          />
-        </div>
-        <p className="text-center text-gray-700 mt-2">Air Cooler<br />Guide</p>
-      </div>
-
-      {/* Lighting Guide */}
-      <div className="flex flex-col items-center">
-        <div className="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center">
-          <img
-            src="https://orientelectric.com/cdn/shop/files/Group_221703_small.png?v=1676269815"
-            alt="Lighting Guide"
-            className="w-20 h-20"
-          />
-        </div>
-        <p className="text-center text-gray-700 mt-2">Lighting<br />Guide</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div className='w-full bg-[#f8f4ee]  pl-16 pr-16'>
-      <hr className='w-full  '></hr>
-      </div>
- <section className="py-12 bg-[#f8f4ee]">
-          <h2 className="text-center text-3xl font-semibold mb-8">
-            Summer Special Offerings
-          </h2>
-    
-          <div className="relative px-4 md:px-32">
-          
-            <div className="flex justify-between items-center mb-4">
-              <button
-                ref={prevRef3}
-                className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute left-16 top-[200px] hover:text-black transition"
-              >
-                <ChevronLeft />
-              </button>
-              <button
-                ref={nextRef3}
-                className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute right-16 top-[200px] hover:text-black transition"
-              >
-                <ChevronRight  />
-              </button>
-            </div>
-    
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={16}
-              slidesPerView={1}
-              pagination={{ 
-              clickable: true,
-              el: '.custom-pagination-3',
-               }}
-              onInit={(swiper) => {
-                swiper.params.navigation.prevEl = prevRef3.current;
-                swiper.params.navigation.nextEl = nextRef3.current;
-                swiper.navigation.init();
-                swiper.navigation.update();
-              }}
-               breakpoints={{
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 4 }
-              }}
-              className=''
-            >
-              {summer.map((product, index) => (
-                <SwiperSlide key={index}>
-                  <Card className="relative">
-                    {product.label && (
-                      <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
-                        {product.label}
-                      </div>
-                    )}
-                    <CardContent className="p-4 flex flex-col items-center text-center">
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className="h-32 mb-4 object-contain"
-                      />
-                      <h3 className="text-sm font-medium truncate w-full">
-                        {product.title}
-                      </h3>
-                      <div className="text-orange-500 text-sm">
-                        {"★".repeat(Math.round(product.rating))} {product.rating} /{" "}
-                        {product.reviews}
-                      </div>
-    
-                      {product.size && (
-                        <div className="text-sm mt-2">
-                          Size:{" "}
-                          {product.size.map((s) => (
-                            <span
-                              className="ml-1 border rounded px-2 py-0.5 text-xs"
-                              key={s}
-                            >
-                              {s}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-    
-                      {product.type && (
-                        <div className="text-sm mt-2">
-                          Type:{" "}
-                          {product.type.map((t) => (
-                            <span
-                              className="ml-1 border rounded px-2 py-0.5 text-xs"
-                              key={t}
-                            >
-                              {t}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-    
-                      <div className="text-sm mt-2">
-                        Color:
-                        {product.color.map((c, i) => (
-                          <span
-                            key={i}
-                            className="w-4 h-4 rounded-full inline-block mx-0.5 border"
-                            style={{ backgroundColor: c }}
-                          ></span>
-                        ))}
-                      </div>
-    
-                      <div className="mt-2 text-sm">
-                        From ₹
-                        <span className="font-semibold">
-                          {product.price.toLocaleString()}
-                        </span>
-                      </div>
-                      <div className="text-xs text-gray-500 line-through">
-                        MRP: ₹{product.mrp.toLocaleString()}
-                      </div>
-                      <div className="text-green-600 text-xs">
-                        {product.discount}
-                      </div>
-    
-                      <Button className="mt-3 w-full text-sm">Add to cart</Button>
-                    </CardContent>
-                  </Card>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-    <div className="custom-pagination-3 mt-8 flex justify-center gap-2"></div>
-          <div className="mt-10 flex justify-center">
-            <Button className="px-6 py-2">View all</Button>
-          </div>
-        </section>
-    <div className='w-full bg-[#f8f4ee]  pl-16 pr-16'>
-      <hr className='w-full  '></hr>
-      </div>
-    <section className="py-12 bg-[#f8f4ee]">
-          <h2 className="text-center text-3xl font-semibold mb-8">
-            Limited Period Offers
-          </h2>
-    
-          <div className="relative px-4 md:px-32">
-          
-            <div className="flex justify-between items-center mb-4">
-              <button
-                ref={prevRef}
-                className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute left-16 top-[200px] hover:text-black transition"
-              >
-                <ChevronLeft />
-              </button>
-              <button
-                ref={nextRef}
-                className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200 absolute right-16 top-[200px] hover:text-black transition"
-              >
-                <ChevronRight  />
-              </button>
-            </div>
-    
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={16}
-              slidesPerView={1}
-              pagination={{ 
-              clickable: true,
-              el: '.custom-pagination-3',
-               }}
-              onInit={(swiper) => {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-                swiper.navigation.init();
-                swiper.navigation.update();
-              }}
-               breakpoints={{
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 4 }
-              }}
-              className=''
-            >
-              {limited.map((product, index) => (
-                <SwiperSlide key={index}>
-                  <Card className="relative">
-                    {product.label && (
-                      <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
-                        {product.label}
-                      </div>
-                    )}
-                    <CardContent className="p-4 flex flex-col items-center text-center">
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className="h-32 mb-4 object-contain"
-                      />
-                      <h3 className="text-sm font-medium truncate w-full">
-                        {product.title}
-                      </h3>
-                      <div className="text-orange-500 text-sm">
-                        {"★".repeat(Math.round(product.rating))} {product.rating} /{" "}
-                        {product.reviews}
-                      </div>
-    
-                      {product.size && (
-                        <div className="text-sm mt-2">
-                          Size:{" "}
-                          {product.size.map((s) => (
-                            <span
-                              className="ml-1 border rounded px-2 py-0.5 text-xs"
-                              key={s}
-                            >
-                              {s}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-    
-                      {product.type && (
-                        <div className="text-sm mt-2">
-                          Type:{" "}
-                          {product.type.map((t) => (
-                            <span
-                              className="ml-1 border rounded px-2 py-0.5 text-xs"
-                              key={t}
-                            >
-                              {t}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-    
-                      <div className="text-sm mt-2">
-                        Color:
-                        {product.color.map((c, i) => (
-                          <span
-                            key={i}
-                            className="w-4 h-4 rounded-full inline-block mx-0.5 border"
-                            style={{ backgroundColor: c }}
-                          ></span>
-                        ))}
-                      </div>
-    
-                      <div className="mt-2 text-sm">
-                        From ₹
-                        <span className="font-semibold">
-                          {product.price.toLocaleString()}
-                        </span>
-                      </div>
-                      <div className="text-xs text-gray-500 line-through">
-                        MRP: ₹{product.mrp.toLocaleString()}
-                      </div>
-                      <div className="text-green-600 text-xs">
-                        {product.discount}
-                      </div>
-    
-                      <Button className="mt-3 w-full text-sm">Add to cart</Button>
-                    </CardContent>
-                  </Card>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-    <div className="custom-pagination-3 mt-8 flex justify-center gap-2"></div>
-          <div className="mt-10 flex justify-center">
-            <Button className="px-6 py-2">View all</Button>
-          </div>
-        </section>
-        <div className='w-full bg-[#f8f4ee]  pl-16 pr-16'>
-      <hr className='w-full  '></hr>
-      </div>
-    <div className="py-10 text-center bg-[#f8f4ee] " >
-  <h2 className="text-4xl font-light mb-10" data-aos="fade-up">A Promise of Excellence</h2>
-
-  <div className="flex justify-center gap-32 flex-wrap" data-aos="fade-up">
-    
-    <div className="flex flex-col items-center">
-      <div className="w-32 h-32 bg-orange-50 rounded-full flex items-center justify-center">
-        <img
-          src="https://orientelectric.com/cdn/shop/files/65_years.svg?v=1687342854"
-          alt="65 Years"
-          className="w-32 h-32"
-        />
-      </div>
-      <p className="text-gray-700 text-sm mt-2">Expertise<br />of 65+ years</p>
-    </div>
-
-    
-    <div className="flex flex-col items-center">
-      <div className="w-32 h-32 bg-orange-50 rounded-full flex items-center justify-center">
-        <img
-          src="https://orientelectric.com/cdn/shop/files/innovation.svg?v=1687342865"
-          alt="Innovation"
-          className="w-32 h-32"
-        />
-      </div>
-      <p className="text-gray-700 text-sm mt-2">Culture of<br />Innovation & Design</p>
-    </div>
-
-    
-    <div className="flex flex-col items-center">
-      <div className="w-32 h-32 bg-orange-50 rounded-full flex items-center justify-center">
-        <img
-          src="https://orientelectric.com/cdn/shop/files/nationwide_impact.svg?v=1684999189"
-          alt="Nationwide"
-          className="w-32 h-32"
-        />
-      </div>
-      <p className="text-gray-700 text-sm mt-2">Nationwide<br />Presence</p>
-    </div>
-
-    
-    <div className="flex flex-col items-center">
-      <div className="w-32 h-32 bg-orange-50 rounded-full flex items-center justify-center">
-        <img
-          src="https://orientelectric.com/cdn/shop/files/happy_customers.svg?v=1684999228"
-          alt="Happy Customers"
-          className="w-32 h-32"
-        />
-      </div>
-      <p className="text-gray-700 text-sm mt-2">20+ Crore<br />Happy Customers</p>
-    </div>
-  </div>
-  <div className='w-full bg-[#f8f4ee] pt-16 pl-16 pr-16'>
-      <hr className='w-full  '></hr>
-      </div>
-</div>
-<section className="bg-[#f8f4ee] py-16">
-  <h2 className="text-4xl text-center font-light mb-8" data-aos="fade-up">
-    Our Handpicked Brands
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-4 md:px-40">
-    <div data-aos="fade-right">
-      <img
-        src="https://www.myzeo.com/wp-content/uploads/2020/02/load-image-18-1-1536x1413.jpeg"
-        alt="Brand kitchen appliances"
-        loading="lazy"
-        className="w-full h-72 object-fill rounded-lg"
-      />
-    </div>
-    <div data-aos="fade-left">
-      <img
-        src="https://thumbs.dreamstime.com/b/seller-household-appliances-section-portrait-male-consultant-working-small-hypermarket-63661856.jpg"
-        alt="Home appliances consultant"
-        loading="lazy"
-        className="w-full h-72 object-fill rounded-lg"
-      />
-    </div>
-  </div>
-  <hr className="mx-auto w-full border-t border-gray-300 mt-16" />
-</section>
-
-<div className="grid grid-cols-1 md:grid-cols-2 pt-10  justify-center bg-[#f8f4ee] items-center gap-5 px-4 md:px-40">
-  <div className="flex flex-col  items-center">
-    <div className="flex flex-col h-[200px] justify-center  text-justify" data-aos="fade-right">
-      <p className="text-3xl font-semibold ">Looking to do</p>
-      <p className="text-3xl font-semibold mb-3">business with us?</p>
-      <p className="w-[250px]  text-gray-700">
-        We’re happy to help you with your <span className="text-center">requirements.</span>
-      </p>
-      <Button className="w-[200px] mt-3">Get in Touch</Button>
-    </div>
-  </div>
-  <div className="flex justify-center" data-aos="fade-left">
-    <img
-      src="https://img.freepik.com/premium-photo/manager-boss-worker-helping-new-employee-as-call-center-agent-training-consultant-work-planning-workflow-with-colleague-company-customer-service-team-conversation-with-coworker_590464-82374.jpg"
-      className="w-[400px] h-[300px] rounded-lg object-cover"
-      alt="Business consultation"
-      loading="lazy"
-    />
-  </div>
-</div>
-
-<div className='w-full bg-[#f8f4ee] pt-16 pl-16 pr-16'>
-      <hr className='w-full  '></hr>
-      </div>
-<div className="pt-10 bg-[#f8f4ee] px-4 md:px-40 relative">
-      <h2 className="text-3xl text-center font-semibold mb-10">Blog</h2>
-
-      {/* Navigation Buttons */}
-      <div className="absolute top-72 left-4 md:left-24 z-10 -translate-y-1/2">
-        <button
-          onClick={() => swiperRef.current?.slidePrev()}
-          className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
-        >
-          <ChevronLeft />
-        </button>
-      </div>
-      <div className="absolute top-72 right-4 md:right-[100px] z-10 -translate-y-1/2">
-        <button
-          onClick={() => swiperRef.current?.slideNext()}
-          className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
-        >
-          <ChevronRight />
-        </button>
-      </div>
-
-      {/* Swiper Slider */}
-      <Swiper
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        spaceBetween={30}
-        modules={[Navigation]}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 1.2 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-      >
-        {blogData.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="rounded-xl overflow-hidden shadow-sm bg-white">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="rounded-md mb-4 w-full h-48 object-cover"
-              />
-              <div className="px-2 pb-4">
-                <h3 className="text-lg font-medium leading-snug">{item.title}</h3>
-                <p className="text-sm text-gray-500 mt-1">{item.date}</p>
-                <p className="text-sm text-gray-600 mt-2">{item.desc}</p>
-                <a
-                  href="#"
-                  className="text-blue-600 text-sm mt-2 inline-flex items-center gap-1"
-                >
-                  Read more <span className="text-xs">➜</span>
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-
-
-    <div className='w-full bg-[#f8f4ee]  pt-16 pl-16 pr-16'>
-      <hr className='w-full  '></hr>
-      </div>
-     <div className='w-full grid grid-cols-1 md:grid-cols-2'>
-    <div className="w-full bg-[#f8f4ee] flex flex-col items-center px-4 py-10" >
-        <FaFacebook className="text-4xl text-blue-500 mb-2" data-aos="fade-up" />
-      <h2 className="text-4xl font-semibold text-center text-[#333]" data-aos="fade-up">Follow Us</h2>
-      <h3 className="text-base text-gray-700 text-center mt-1"data-aos="fade-up">@InnomindSolutions</h3>
-      <h4 className="text-sm text-gray-600 text-center mb-6"data-aos="fade-up">121k followers</h4>
-
-      <div className="flex items-center gap-4 w-full max-w-[1100px]">
-        <button
-          onClick={prevSlide1}
-          className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
-          data-aos="fade-up"
-        >
-          <ChevronLeft size={24} />
-        </button>
-
-        <div className="flex gap-4 overflow-hidden"data-aos="fade-up">
-          {videoThumbnails
-            .slice(currentIndex1, currentIndex1 + visibleCards)
-            .map((src, index) => (
-              <VideoCard key={index} src={src} />
-            ))}
-        </div>
-
-        <button
-          onClick={nextSlide1}
-          className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
-          data-aos="fade-up"
-        >
-          <ChevronRight size={24} />
-        </button>
-      </div>
-    </div>
-
-    <div className="w-full bg-[#f8f4ee] flex flex-col items-center px-4 py-10" >
-        <FaInstagram className="text-4xl text-pink-500 mb-2" data-aos="fade-up" />
-      <h2 className="text-4xl font-semibold text-center text-[#333]" data-aos="fade-up">Follow Us</h2>
-      <h3 className="text-base text-gray-700 text-center mt-1" data-aos="fade-up">@InnomindSolutions</h3>
-      <h4 className="text-sm text-gray-600 text-center mb-6" data-aos="fade-up">180k followers</h4>
-
-      <div className="flex items-center gap-4 w-full max-w-[1100px]">
-        <button
-          onClick={prevSlide2}
-          data-aos="fade-up"
-          className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
-        >
-          <ChevronLeft size={24} />
-        </button>
-
-        <div className="flex gap-4 overflow-hidden" data-aos="fade-up">
-          {videoThumbnails
-            .slice(currentIndex2, currentIndex2 + visibleCards)
-            .map((src, index) => (
-              <VideoCard key={index} src={src} className />
-            ))}
-        </div>
-
-        <button
-          onClick={nextSlide2}
-          data-aos="fade-up"
-          className="bg-white text-gray-700 p-2 rounded-full shadow hover:bg-gray-200"
-        >
-          <ChevronRight size={24} />
-        </button>
-      </div>
-    </div>
-</div>
-
-
-      </div>
   );
 }
 

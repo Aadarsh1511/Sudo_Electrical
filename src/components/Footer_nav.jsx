@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Footer_nav=()=> {
+const Footer_nav = () => {
   return (
-    <div className="bg-white text-[#2D3540] py-12 px-6 md:px-20">
+    <div className="bg-white font-serif text-[#2D3540] py-12 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-sm">
-        
+
         <div>
           <p className="font-semibold mb-2">Fans</p>
           <ul className="space-y-1 text-gray-600">
@@ -26,7 +26,7 @@ const Footer_nav=()=> {
           </ul>
         </div>
 
-        
+
         <div>
           <p className="font-semibold mb-2">Small Appliances</p>
           <ul className="space-y-1 text-gray-600">
@@ -51,7 +51,7 @@ const Footer_nav=()=> {
           </ul>
         </div>
 
-        
+
         <div>
           <p className="font-semibold mb-2">Professional Lighting</p>
           <ul className="space-y-1 text-gray-600">
@@ -70,7 +70,7 @@ const Footer_nav=()=> {
           </ul>
         </div>
 
-      
+
         <div>
           <p className="font-semibold mb-2">LED Consumer Luminaries</p>
           <ul className="space-y-1 text-gray-600">
@@ -107,7 +107,7 @@ const Footer_nav=()=> {
           </ul>
         </div>
 
-        
+
         <div>
           <p className="font-semibold mb-2">Careers</p>
           <ul className="space-y-1 text-gray-600">
@@ -129,13 +129,13 @@ const Footer_nav=()=> {
         </div>
       </div>
 
-      
+
       <div className="max-w-7xl mx-auto mt-12 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
         <div className="flex items-center gap-2 mb-4 md:mb-0">
           <img src="https://www.innomind.com.tr/wp-content/uploads/2024/10/innologodolulucurve.png" alt="Co. Logo" className="h-6" />
         </div>
-          <p>M-12, Madhuban Colony, Tonk Phatak - Jaipur - 302015</p>
-          <p>© 2025. All Rights Reserved</p>
+        <p>M-12, Madhuban Colony, Tonk Phatak - Jaipur - 302015</p>
+        <p>© 2025. All Rights Reserved</p>
         <div className='flex flex-col'>
           <img src="https://www.innomind.com.tr/wp-content/uploads/2024/10/innologodolulucurve.png" alt="Co. Logo" className="ml-16 w-8 h-8" />
           <p className="font-bold text-[#f05a28] h-12">INNOMIND SOLUTIONS</p>

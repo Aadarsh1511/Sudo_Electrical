@@ -20,24 +20,24 @@ import Careers from './Pages/Careers';
 const App = () => {
   return (
     <Router>
-      <Header/>
+      <Header />
       <Routes>
-      <Route path="/" element={<Content />} />
-      <Route path="/contact" element={<Contact/>} />
-      <Route path="/about" element={<About/>} />
-      <Route path="/blogs" element={<Blogs/>} />
-      <Route path="/projects" element={<Projects/>} />
-      <Route path="/services" element={<Services/>} />
-      <Route path="/careers" element={<Careers/>} />
+        <Route path="/" element={<Content />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/careers" element={<Careers />} />
 
 
-      <Route path="/Fans" element={<Fans/>}/>
-      <Route path="/lighting" element={<Lighting/>} />
-      <Route path="/aircooler" element={<AirCooler />} />
-      <Route path="/waterheaters" element={<WaterHeaters />} />
-      <Route path="/smallappliances" element={<SmallAppliances />} />
-      <Route path="/switchgears" element={<SwitchGears />} />
-      <Route path="/registerwarranty" element={<RegisterWarranty/>}/> 
+        <Route path="/Fans" element={<Fans />} />
+        <Route path="/lighting" element={<Lighting />} />
+        <Route path="/aircooler" element={<AirCooler />} />
+        <Route path="/waterheaters" element={<WaterHeaters />} />
+        <Route path="/smallappliances" element={<SmallAppliances />} />
+        <Route path="/switchgears" element={<SwitchGears />} />
+        <Route path="/registerwarranty" element={<RegisterWarranty />} />
 
 
       </Routes>
